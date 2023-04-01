@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 8px;
+}
+
+/*Main Container Styles*/
+.container{
+    display: flex;
+}
+
+
+/*Left Nav Bar Sytles*/
+.nav-bar{
+    flex-basis: 25%;
+    border-right: 2px solid grey;
+    position:fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    color: #4d4e53;
+}
+
+.nav-bar .Nav-Header{
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.nav-bar  .nav-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar .nav-list a{
+    text-decoration: none;
+}
+
+.nav-bar .nav-list .nav-link{
+    
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;;
+}
+
+/*Content Area Styles*/
+.main-content{
+    flex-basis: 75%;
+    position:absolute;
+    margin-left: 150px;
+    padding: 0 20px 20px 10px;
+}
+
+.main-section{
+    line-height: 1.3rem;
+    color: #4d4e53;
+}
+
+.main-section header{
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 20px 0 10px;
+    color: black;
+}
+
+.main-section p{
+    margin-left: 10px;
+    padding: 10px 0;
+}
+
+.main-section > ul{
+    margin-left: 40px;
+}
+
+.main-section li{
+    padding: 5px 0;
+}
+
+.main-section > ul > ul{
+    margin-left: 30px;
+}
+
+.main-section code{
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+    display: block;
+    white-space: pre-line;
+}
+
+@media (min-width: 576px){
+    html{
+        font-size: 16px;
+    }
+
+   .nav-bar{
+    height: 100vh;
+    overflow: hidden;
+   }
+
+    .nav-bar .nav-list{
+        overflow: scroll;
+        height: 90%;
+    }
+
+    .nav-bar .nav-list a{
+        display: block;
+    }
+
+    .main-content{
+        margin-left: 290px;
+        padding: 10px 20px 20px 10px;
+    }
+}
